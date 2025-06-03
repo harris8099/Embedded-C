@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void){
+
+	float number = 45.78976834578;
+	printf("number is %f", number);
+
+	return 0;
+}

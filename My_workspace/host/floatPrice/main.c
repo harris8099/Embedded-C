@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void){
+
+//	float number = 45.78976834578;
+//	//double number = 45.78976834578;
+//
+//	printf("number is %f\n", number);
+//	printf("number is %0.9f\n", number); // upto 9 decimal places
+//
+//	printf("number is %0.14lf\n", number);
+//	printf("number is %e\n", number); // scientific notatioin
+
+	double charE = -1.60217662e-19;  // double give precision upto 15 decimal places
+	printf("number is %f\n", charE);
+	printf("number is %e\n", charE);
+
+	printf("number is %0.8lf\n", charE);
+	printf("number is %0.8le\n", charE);
+
+	return 0;
+}

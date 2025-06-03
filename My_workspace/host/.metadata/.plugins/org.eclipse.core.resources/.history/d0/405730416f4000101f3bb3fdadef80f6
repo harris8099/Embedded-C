@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+long long int value = 0x8000562489FFFFFF;
+
+int main(void){
+	long long ch = (long long)value;
+	printf("Value is: %llx\n", ch);
+
+	return 0;
+}

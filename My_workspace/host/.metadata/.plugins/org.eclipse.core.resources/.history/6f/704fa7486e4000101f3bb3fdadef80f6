@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+long long int value = 0x8000562489FFFFFF;
+
+int main(void){
+	printf("Value is: %I64x\n", value);
+
+	return 0;
+}

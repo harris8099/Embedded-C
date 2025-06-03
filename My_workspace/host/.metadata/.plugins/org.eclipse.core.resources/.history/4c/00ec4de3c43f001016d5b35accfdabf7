@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void){
+
+	char data = 100;
+	printf("Address of ch: %p\n", &data);
+
+	return 0;
+}

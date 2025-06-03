@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main(void){
+	double charE = 1.602e-19;
+	printf("%le", charE);
+
+	return 0;
+}

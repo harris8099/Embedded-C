@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void){
+	uint16_t age;
+	printf("Enter your age: ");
+	scanf("%hd", &age);
+	if(age >= 18){
+		printf("You are eligible to cast the vote");
+	}
+	else{
+		printf("You are not eligible to cast the vote");
+	}
+
+	return 0;
+}

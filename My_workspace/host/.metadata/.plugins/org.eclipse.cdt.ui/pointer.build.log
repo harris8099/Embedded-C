@@ -1,0 +1,17 @@
+21:13:08 **** Incremental Build of configuration Debug for project pointer ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:17:45: warning: 'I' flag used with '%x' gnu_printf format [-Wformat=]
+   17 |         printf("Value at address %p is: %I64x\n", pAddress3, *pAddress3);
+      |                                             ^
+..\main.c:17:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long long int' [-Wformat=]
+   17 |         printf("Value at address %p is: %I64x\n", pAddress3, *pAddress3);
+      |                                         ~~~~^                ~~~~~~~~~~
+      |                                             |                |
+      |                                             unsigned int     long long int
+      |                                         %I64llx
+gcc -o pointer.exe main.o 
+
+21:13:09 Build Finished. 0 errors, 2 warnings. (took 456ms)
+

@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <ctype.h>
+int main(void){
+	char c[6];
+	int count = 0;
+	int ch;
+	printf("Enter characters: \n");
+
+//	for(int i=0; i<6; i++){
+//		//scanf(" %c", &c[i]);
+//
+//	}
+
+	// OR
+
+	while (count < 6){
+		ch = getchar();
+		if(!isspace(ch)){
+			c[count++]=ch;
+		}
+	}
+
+	for(int i=0; i<6; i++){
+		printf("Ascii code for %c is %d\n", c[i], c[i]);
+	}
+	printf("Press ENTER key to exit the application......");
+	while(getchar() != '\n'){
+
+	}
+	getchar();
+	return 0;
+}

@@ -1,0 +1,11 @@
+17:15:14 **** Incremental Build of configuration Debug for project operators ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:7:17: warning: unsigned conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '302' to '46' [-Woverflow]
+    7 |         value = 2+3*100;
+      |                 ^
+gcc -o operators.exe main.o 
+
+17:15:14 Build Finished. 0 errors, 1 warnings. (took 282ms)
+

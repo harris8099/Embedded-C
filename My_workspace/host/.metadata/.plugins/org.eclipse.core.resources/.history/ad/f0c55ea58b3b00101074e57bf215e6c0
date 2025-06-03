@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+extern float add(float a , float b);
+
+int main(){
+    printf("add is: %f", add(1.0,3.0));
+    return 0;
+}
+

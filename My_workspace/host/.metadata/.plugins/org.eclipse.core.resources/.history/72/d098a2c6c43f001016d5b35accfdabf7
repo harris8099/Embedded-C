@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(void){
+
+	char ch = 100;
+	int *pt = &ch;
+	printf("Address of ch: %d", pt);
+
+	return 0;
+}

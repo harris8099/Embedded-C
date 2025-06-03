@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void){
+
+	float number = 45.78976834578;
+
+	printf("number is %f", number);
+	printf("number is %0.9f", number); // upto 9 decimal places
+
+	return 0;
+}
