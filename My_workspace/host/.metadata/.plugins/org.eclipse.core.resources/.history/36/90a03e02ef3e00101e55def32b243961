@@ -1,9 +1,0 @@
-#include <stdio.h>
-
-int main(void){
-
-	double number = 45.78976834578;
-	printf("number is %lf", number);
-
-	return 0;
-}
