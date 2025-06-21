@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdint.h>
+
+struct carModel {
+	uint32_t carNumber;
+	uint32_t carPrice;
+	uint16_t carMaxSpeed;
+	float carWeight;
+};
+
+int main(void){
+	struct carModel carBMW = {2021, 15000, 220 ,1330};
+	struct carModel carFord = {.carNumber = 4031, .carPrice = 35000, .carMaxSpeed = 1900, .carWeight = 96};
+
+	printf("Details of car BMW is as follows: \n");
+	printf("carNumber: %d\n", carBMW.carNumber);
+	printf("carPrice: %d\n", carBMW.carPrice);
+	printf("carMacSpeed: %d\n", carBMW.carMaxSpeed);
+	printf("carWeight: %f\n", carBMW.carWeight);
+
+	carFord.carNumber = 1000;
+
+	printf("\nDetails of car Ford is as follows: \n");
+	printf("carNumber: %d\n", carFord.carNumber);
+	printf("carPrice: %d\n", carFord.carPrice);
+	printf("carMacSpeed: %d\n", carFord.carMaxSpeed);
+	printf("carWeight: %f\n", carFord.carWeight);
+
+	printf("\nSize of struct data types: %lld",sizeof(carFord));
+
+	return 0;
+}

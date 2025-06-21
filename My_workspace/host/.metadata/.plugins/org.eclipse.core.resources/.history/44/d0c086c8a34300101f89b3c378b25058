@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdint.h>
+
+struct decode{
+
+};
+
+int main(void){
+	int32_t userInput;
+	printf("Enter the 32bit packet: ");
+	scanf(" %x",&userInput);
+
+	return 0;
+}

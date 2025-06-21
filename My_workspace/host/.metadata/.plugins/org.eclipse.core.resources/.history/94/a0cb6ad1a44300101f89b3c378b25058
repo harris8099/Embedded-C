@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdint.h>
+
+struct packet{
+	int8_t crc;
+	int8_t status;
+	int16_t payload;
+	int8_t bat;
+	int8_t sensor;
+	int8_t longAddr;
+	int8_t shortAddr;
+	int8_t addrMode;
+};
+
+int main(void){
+	int32_t userInput, temp;
+	printf("Enter the 32bit packet: ");
+	scanf(" %x",&userInput);
+
+	struct packet packet1;
+	temp = userInput;
+	packet1.crc = temp & (3);
+
+	temp = userInput;
+	packet1.status = temp & (1 << 2);
+
+	temp = userInput;
+	packet1.payload = temp & (0x111111111111 << 2);
+
+	temp = userInput;
+	packet1.bat = temp & (0x111 << 15);
+
+	temp = userInput;
+	packet1.sensor = temp & (0x111 << 18);
+
+	temp = userInput;
+	packet1.longAddr = temp & (0x11111111 << 21);
+
+	printf("bat: %x", packet1.bat);
+
+	return 0;
+}

@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdint.h>
+
+union Address{
+	uint16_t shortAddr;
+	uint32_t longAddr;
+};
+
+int main(void){
+
+
+	return 0;
+}

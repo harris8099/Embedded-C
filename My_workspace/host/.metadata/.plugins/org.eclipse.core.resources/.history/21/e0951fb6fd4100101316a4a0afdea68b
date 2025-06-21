@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void){
+	uint8_t count=0, max=100, i=0;
+
+	printf("Enter maximum value: ");
+	scanf(" %hhd", &max);
+	printf("Enter minimum value: ");
+	scanf(" %hhd", &i);
+
+	while(i <= max){
+		if(i % 2 == 0){
+			count++;
+			printf("%d\n", i);
+		}
+		i++;
+	}
+	printf("Total even numbers are: %d", count);
+	return 0;
+}

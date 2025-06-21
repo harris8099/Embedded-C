@@ -1,0 +1,9 @@
+#include <stdint.h>
+#include <stdio.h>
+#include "main.h"
+
+int main(void)
+{
+    /* Loop forever */
+	for(;;);
+}

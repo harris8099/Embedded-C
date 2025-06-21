@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdint.h>
+
+void waitFunction(void);
+
+
+int main(void){
+	int32_t in1,in2;
+	printf("Enter two inputs: ");
+	scanf("%d %d",&in1,&in2);
+	printf("\n& operation: %d\n", (in1&in2));
+	printf("| operation: %d\n", (in1|in2));
+	printf("^ operation: %d\n", (in1^in2));
+	printf("~ operation: %d\n", (~in1));
+
+	waitFunction();
+	return 0;
+}
+
+void waitFunction(void){
+	printf("\n\nPress Enter to exit the application....");
+	while(getchar()!='\n'){
+
+	}
+	getchar();
+}

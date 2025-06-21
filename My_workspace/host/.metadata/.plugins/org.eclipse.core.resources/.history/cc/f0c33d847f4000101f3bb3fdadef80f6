@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdint.h>
+
+int taxCalculator(float income, int taxrate);
+void waitFunction(void);
+
+int main(void){
+	float income;
+	int in;
+	printf("Enter your income: ");
+	in = scanf(" %f",&income);
+	if(in==1){
+		if(income <= 9525.0){
+			printf("Your payable tax is: 0");
+		}
+		else if((income > 9525.0)&&(income <= 38700.0)){
+			printf("Your payable tax is: %d", taxCalculator(income, 12));
+		}
+		else if((income > 38700.0)&&(income <= 82500.0)){
+			printf("Your payable tax is: %d", taxCalculator(income, 22));
+		}
+		else if(income > 82500.0){
+			printf("Your payable tax is: %d", (taxCalculator(income, 32)+1000));
+		}
+	}
+	else{
+		printf("Invalid input");
+		waitFunction();
+		return 0;
+	}
+	waitFunction();
+	return 0;
+}
+
+int taxCalculator(float income, int taxrate){
+	printf("here");
+	return (int)(income*(taxrate/100));
+}
+
+void waitFunction(void){
+	printf("\n\nPress Enter to exit the application....");
+	while(getchar()!='\n'){
+
+	}
+	getchar();
+}

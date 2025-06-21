@@ -1,4 +1,13 @@
-18:23:43 **** Incremental Build of configuration Debug for project if_exercise2 ****
+15:34:23 **** Incremental Build of configuration Debug for project union ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -o if_exercise2.exe main.o 
+gcc -o union.exe main.o 
+Info: Nothing to build for union
+15:36:03 **** Incremental Build of configuration Debug for project union ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o union.exe main.o 
+15:36:17 **** Incremental Build of configuration Debug for project union ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o union.exe main.o 

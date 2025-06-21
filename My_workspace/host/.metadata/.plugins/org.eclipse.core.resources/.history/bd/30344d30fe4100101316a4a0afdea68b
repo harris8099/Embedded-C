@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdint.h>
+
+void waitFunction(void);
+
+int main(void){
+	int16_t count=0, max=100, i=0;
+
+	printf("Enter maximum value: ");
+	scanf(" %hd", &max);
+	printf("Enter minimum value: ");
+	scanf(" %hd", &i);
+
+	while(i <= max){
+//		if(i < 0){
+//			i *= -1;
+//		}
+		if(i % 2 == 0){
+			count++;
+			printf("%d\n", i);
+		}
+		i++;
+	}
+	printf("Total even numbers are: %d", count);
+
+	waitFunction();
+
+	return 0;
+}
+
+void waitFunction(void){
+	printf("\n\nPress Enter to exit the application....");
+	while(getchar()!='\n'){
+
+	}
+	getchar();
+}

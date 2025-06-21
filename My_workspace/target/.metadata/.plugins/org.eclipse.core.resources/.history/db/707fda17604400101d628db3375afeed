@@ -1,0 +1,60 @@
+#include <stdint.h>
+#include <stdio.h>
+#include "main.h"
+
+int main(void)
+{
+	RCC_AHB1ENR_t volatile *const pClkCtrlReg = (RCC_AHB1ENR_t *)0x40023830;
+	GPIOx_MODE_t volatile *const pPortDModereg = (GPIOx_MODE_t *)0x40020C00;
+	GPIOx_MODE_t volatile *const pPortDPUPDreg = (GPIOx_MODE_t *)0x40020C0C;
+	GPIOx_ODR_t volatile *const pPortDOutreg = (GPIOx_ODR_t *)0x40020C14;
+	GPIOx_ODR_t volatile *const pPortDInreg = (GPIOx_ODR_t *)0x40020C10;
+
+	pPortDPUPDreg->pin_8 = 1;
+	pPortDPUPDreg->pin_9 = 1;
+	pPortDPUPDreg->pin_10 = 1;
+	pPortDPUPDreg->pin_11 = 1;
+
+	pClkCtrlReg->gpiod_en = 1;
+
+	pPortDModereg->pin_0 = 1;
+	pPortDModereg->pin_1 = 1;
+	pPortDModereg->pin_2 = 1;
+	pPortDModereg->pin_3 = 1;
+	pPortDModereg->pin_8 = 0;
+	pPortDModereg->pin_9 = 0;
+	pPortDModereg->pin_10 = 0;
+	pPortDModereg->pin_11 = 0;
+
+	const char keyMap[4][4] = {
+	    {'1', '2', '3', 'A'},
+	    {'4', '5', '6', 'B'},
+	    {'7', '8', '9', 'C'},
+	    {'*', '0', '#', 'D'}
+	};
+
+	for (uint8_t row = 0; row < 4; row++) {
+	    // Set all rows low
+	    pPortDOutreg->pin_0 = 0;
+	    pPortDOutreg->pin_1 = 0;
+	    pPortDOutreg->pin_2 = 0;
+	    pPortDOutreg->pin_3 = 0;
+
+	    // Set current row high
+	    if (row == 0) pPortDOutreg->pin_0 = 1;
+	    if (row == 1) pPortDOutreg->pin_1 = 1;
+	    if (row == 2) pPortDOutreg->pin_2 = 1;
+	    if (row == 3) pPortDOutreg->pin_3 = 1;
+
+	    // Small delay for signals to settle
+	    delay_ms(5);  // implement a small delay function or use HAL_Delay
+
+	    // Read columns
+	    if (pPortDInreg->pin_8 == 1) printf("Key %c is pressed\n", keyMap[row][0]);
+	    else if (pPortDInreg->pin_9 == 1) printf("Key %c is pressed\n", keyMap[row][1]);
+	    else if (pPortDInreg->pin_10 == 1) printf("Key %c is pressed\n", keyMap[row][2]);
+	    else if (pPortDInreg->pin_11 == 1) printf("Key %c is pressed\n", keyMap[row][3]);
+	}
+
+
+}

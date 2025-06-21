@@ -1,0 +1,7 @@
+20:32:08 **** Incremental Build of configuration Debug for project bitwise_exercise ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o bitwise_exercise.exe main.o 
+
+20:32:08 Build Finished. 0 errors, 0 warnings. (took 298ms)
+
