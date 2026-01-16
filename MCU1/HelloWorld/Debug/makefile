@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := 001HelloWorld
+BUILD_ARTIFACT_NAME := HelloWorld
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-001HelloWorld.elf \
+HelloWorld.elf \
 
 MAP_FILES += \
-001HelloWorld.map \
+HelloWorld.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-001HelloWorld.list \
+HelloWorld.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: 001HelloWorld.elf secondary-outputs
+main-build: HelloWorld.elf secondary-outputs
 
 # Tool invocations
-001HelloWorld.elf 001HelloWorld.map: $(OBJS) $(USER_OBJS) C:\Users\harri\OneDrive\Documents\Embedded-C\MCU1\HelloWorld\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "001HelloWorld.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\harri\OneDrive\Documents\Embedded-C\MCU1\HelloWorld\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+HelloWorld.elf HelloWorld.map: $(OBJS) $(USER_OBJS) C:\Users\Harshil\Documents\Embedded-C\MCU1\HelloWorld\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "HelloWorld.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Harshil\Documents\Embedded-C\MCU1\HelloWorld\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-001HelloWorld.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "001HelloWorld.list"
+HelloWorld.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "HelloWorld.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) 001HelloWorld.elf 001HelloWorld.list 001HelloWorld.map default.size.stdout
+	-$(RM) HelloWorld.elf HelloWorld.list HelloWorld.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
