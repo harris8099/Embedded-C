@@ -287,6 +287,12 @@ typedef struct{
 
 
 /*
+ *	Macros to reset SPIx peripherals
+ */
+
+#define
+
+/*
  * return port code for given GPIOx base address
  */
 #define GPIO_BASEADDR_TO_CODE(x)		    ( (x == GPIOA) ? 0:\
