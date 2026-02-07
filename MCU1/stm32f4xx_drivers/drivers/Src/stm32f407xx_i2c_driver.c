@@ -1,0 +1,110 @@
+/*
+ * stm32f407xx_i2c_driver.c
+ *
+ *  Created on: 07-Feb-2026
+ *      Author: harri
+ */
+
+#include "stm32f407xx_i2c_driver.h"
+
+
+
+/*********************************************************************
+ * @fn      		  - I2C_PeripheralControl
+ *
+ * @brief             -
+ *
+ * @param[in]         -
+ * @param[in]         -
+ * @param[in]         -
+ *
+ * @return            -
+ *
+ * @Note              -
+
+ */
+
+void I2C_PeripheralControl(I2C_RegDef_t *pI2Cx, uint8_t EnOrDi)
+{
+	if(EnOrDi == ENABLE)
+	{
+		pI2Cx->CR1	|= (1 << I2C_CR1_PE);
+	}
+	else
+	{
+		pI2Cx->CR1 &= ~(1 << I2C_CR1_PE);
+	}
+}
+
+/*********************************************************************
+ * @fn      		  - I2C_PeriClockControl
+ *
+ * @brief             -
+ *
+ * @param[in]         -
+ * @param[in]         -
+ * @param[in]         -
+ *
+ * @return            -
+ *
+ * @Note              -
+
+ */
+void I2C_PeriClockControl(I2C_RegDef_t *pI2Cx, uint8_t EnorDi)
+{
+	if(EnorDi == ENABLE)
+	{
+		if(pI2Cx == I2C1)
+		{
+			I2C1_PCLK_EN();
+		}else if(pI2Cx == I2C2)
+		{
+			I2C2_PCLK_EN();
+		}else if(pI2Cx == I2C3)
+		{
+			I2C3_PCLK_EN();
+		}
+	}
+	else{
+		// TODO
+	}
+}
+
+/*********************************************************************
+ * @fn      		  - I2C_Init
+ *
+ * @brief             -
+ *
+ * @param[in]         -
+ * @param[in]         -
+ * @param[in]         -
+ *
+ * @return            -
+ *
+ * @Note              -
+
+ */
+void I2C_Init(I2C_Handle_t *pI2CHandle)
+{
+
+}
+
+/*********************************************************************
+ * @fn      		  - I2C_DeInit
+ *
+ * @brief             -
+ *
+ * @param[in]         -
+ * @param[in]         -
+ * @param[in]         -
+ *
+ * @return            -
+ *
+ * @Note              -
+
+ */
+void I2C_DeInit(I2C_RegDef_t *pI2Cx)
+{
+
+}
+

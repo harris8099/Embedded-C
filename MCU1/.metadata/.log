@@ -14997,3 +14997,27 @@ COM3
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-02-02 16:53:21.657
 !MESSAGE Indexed 'stm32f4xx_drivers' (3 sources, 33 headers) in 0.183 sec: 1,554 declarations; 3,485 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.04%)
+!SESSION 2026-02-07 08:06:20.781 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-02-07 08:06:30.459
+!MESSAGE Log4j2 initialized with config file C:\Users\harri\OneDrive\Documents\Embedded-C\MCU1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-02-07 08:06:37.952
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-07 08:06:51.881
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+COM3
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-07 08:06:51.883
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-07 08:06:51.885
+!MESSAGE port: COM3

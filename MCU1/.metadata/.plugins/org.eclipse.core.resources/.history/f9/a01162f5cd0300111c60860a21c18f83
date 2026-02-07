@@ -1,3 +1,9 @@
+/*
+ * stm3f407xx.h
+ *
+ *  Created on: Jan 29, 2019
+ *      Author: admin
+ */
 
 #ifndef INC_STM3F407XX_H_
 #define INC_STM3F407XX_H_
@@ -609,7 +615,7 @@ typedef struct
 
 #include "stm32f407xx_gpio_driver.h"
 #include "stm32f407xx_spi_driver.h"
-#include "stm32f407xx_i2c_driver.h"
+//#include "stm32f407xx_i2c_driver.h"
 //#include "stm32f407xx_usart_driver.h"
 //#include "stm32f407xx_rcc_driver.h"
 
