@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
+# Toolchain: GNU Tools for STM32 (14.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -11,7 +11,6 @@ RM := rm -rf
 -include sources.mk
 -include drivers/Src/subdir.mk
 -include Startup/subdir.mk
--include Src/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
