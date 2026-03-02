@@ -321,12 +321,12 @@ typedef struct
 /*
  * Clock Enable Macros for USARTx peripherals
  */
-#define USART1_PCCK_EN() (RCC->APB2ENR |= (1 << 4))
-#define USART2_PCCK_EN() (RCC->APB1ENR |= (1 << 17))
-#define USART3_PCCK_EN() (RCC->APB1ENR |= (1 << 18))
-#define UART4_PCCK_EN()  (RCC->APB1ENR |= (1 << 19))
-#define UART5_PCCK_EN()  (RCC->APB1ENR |= (1 << 20))
-#define USART6_PCCK_EN() (RCC->APB1ENR |= (1 << 5))
+#define USART1_PCLK_EN() (RCC->APB2ENR |= (1 << 4))
+#define USART2_PCLK_EN() (RCC->APB1ENR |= (1 << 17))
+#define USART3_PCLK_EN() (RCC->APB1ENR |= (1 << 18))
+#define UART4_PCLK_EN()  (RCC->APB1ENR |= (1 << 19))
+#define UART5_PCLK_EN()  (RCC->APB1ENR |= (1 << 20))
+#define USART6_PCLK_EN() (RCC->APB2ENR |= (1 << 5))
 
 /*
  * Clock Enable Macros for SYSCFG peripheral
@@ -401,8 +401,10 @@ typedef struct
 #define IRQ_NO_SPI2         36
 #define IRQ_NO_SPI3         51
 #define IRQ_NO_SPI4
-#define IRQ_NO_I2C1_EV     31
-#define IRQ_NO_I2C1_ER     32
+#define IRQ_NO_I2C1_EV     	31
+#define IRQ_NO_I2C1_ER     	32
+#define IRQ_NO_I2C2_EV		33
+#define IRQ_NO_I2C2_ER     	34
 #define IRQ_NO_USART1	    37
 #define IRQ_NO_USART2	    38
 #define IRQ_NO_USART3	    39
@@ -414,8 +416,8 @@ typedef struct
 /*
  * macros for all the possible priority levels
  */
-#define NVIC_IRQ_PRI0    0
-#define NVIC_IRQ_PRI15    15
+#define NVIC_IRQ_PRI0    	0
+#define NVIC_IRQ_PRI15   	15
 
 
 //some generic macros
@@ -426,7 +428,7 @@ typedef struct
 #define RESET 				DISABLE
 #define GPIO_PIN_SET        SET
 #define GPIO_PIN_RESET      RESET
-#define FLAG_RESET         RESET
+#define FLAG_RESET         	RESET
 #define FLAG_SET 			SET
 
 
@@ -598,7 +600,7 @@ typedef struct
 
 #define USART_SR_PE        				0
 #define USART_SR_FE        				1
-#define USART_SR_NE        				2
+#define USART_SR_NF        				2
 #define USART_SR_ORE       				3
 #define USART_SR_IDLE       			4
 #define USART_SR_RXNE        			5
@@ -610,7 +612,7 @@ typedef struct
 #include "stm32f407xx_gpio_driver.h"
 #include "stm32f407xx_spi_driver.h"
 #include "stm32f407xx_i2c_driver.h"
-//#include "stm32f407xx_usart_driver.h"
-//#include "stm32f407xx_rcc_driver.h"
+#include "stm32f407xx_usart_driver.h"
+#include "stm32f407xx_rcc_driver.h"
 
 #endif /* INC_STM3F407XX_H_ */

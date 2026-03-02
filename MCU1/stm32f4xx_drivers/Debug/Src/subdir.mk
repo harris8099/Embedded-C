@@ -1,17 +1,17 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
+# Toolchain: GNU Tools for STM32 (14.3.rel1)
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/009spi_message_rcv_it.c 
+../Src/017rtc_lcd.c 
 
 OBJS += \
-./Src/009spi_message_rcv_it.o 
+./Src/017rtc_lcd.o 
 
 C_DEPS += \
-./Src/009spi_message_rcv_it.d 
+./Src/017rtc_lcd.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/009spi_message_rcv_it.cyclo ./Src/009spi_message_rcv_it.d ./Src/009spi_message_rcv_it.o ./Src/009spi_message_rcv_it.su
+	-$(RM) ./Src/017rtc_lcd.cyclo ./Src/017rtc_lcd.d ./Src/017rtc_lcd.o ./Src/017rtc_lcd.su
 
 .PHONY: clean-Src
 

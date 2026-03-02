@@ -1,0 +1,37 @@
+/*
+ * stm32f407xx_usart_driver.c
+ *
+ *  Created on: Mar 1, 2026
+ *      Author: harri
+ */
+
+
+#include "stm32f407xx_usart_driver.h"
+
+void USART_PeriClockControl(USART_RegDef_t *pUSARTx, uint8_t EnOrDi)
+{
+	if(EnOrDi == ENABLE)
+	{
+		if(pUSARTx == USART1){
+			USART1_PCLK_EN();
+		}else if(pUSARTx == USART2)
+		{
+
+		}else if(pUSARTx == USART2)
+		{
+
+		}else if(pUSARTx == USART3)
+		{
+
+		}else if(pUSARTx == UART4)
+		{
+
+		}else if(pUSARTx == UART5)
+		{
+
+		}else if(pUSARTx == USART6)
+		{
+
+		}
+	}
+}

@@ -1,0 +1,60 @@
+/*
+ * stm32f407xx_usart_driver.h
+ *
+ *  Created on: Mar 1, 2026
+ *      Author: harri
+ */
+
+#ifndef INC_STM32F407XX_USART_DRIVER_H_
+#define INC_STM32F407XX_USART_DRIVER_H_
+
+#include "stm32f407xx.h"
+
+/*
+ * Configuration structure for USARTx peripheral
+ */
+typedef struct
+{
+	uint8_t 	USART_Mode;
+	uint32_t	USART_Baud;
+	uint8_t		USART_NoOfStopBits;
+	uint8_t		USART_WordLength;
+	uint8_t		USART_ParityControl;
+	uint8_t		USART_HWFlowControl;
+}USART_Config_t;
+
+
+/*
+ * Handle structure for USARTx peripheral
+ */
+typedef struct
+{
+	USART_RegDef_t *pUSARTx;
+	USART_Config_t USART_Config;
+}USART_Handle_t;
+
+
+#define USART_FLAG_PE		( 1 << USART_SR_PE )
+#define USART_FLAG_FE		( 1 << USART_SR_FE )
+#define USART_FLAG_NF		( 1 << USART_SR_NF )
+#define USART_FLAG_ORE		( 1 << USART_SR_ORE )
+#define USART_FLAG_IDLE		( 1 << USART_SR_IDLE )
+#define USART_FLAG_RXNE		( 1 << USART_SR_RXNE )
+#define USART_FLAG_TC		( 1 << USART_SR_TC )
+#define USART_FLAG_TXE		( 1 << USART_SR_TXE )
+#define USART_FLAG_LBD		( 1 << USART_SR_LBD )
+#define USART_FLAG_CTS		( 1 << USART_SR_CTS )
+
+
+
+void USART_PeriClockControl(USART_RegDef_t *pUSARTx, uint8_t EnOrDi);
+void USART_PeripheralControl(USART_RegDef_t *pUSARTx, uint8_t EnOrDi);
+
+uint8_t USART_GetFlagStatus(USART_RegDef_t *pUSARTx, uint8_t StatusFlagName);
+void USART_ClearFlag(USART_RegDef_t *pUSARTx, uint16_t StatusFlagName);
+
+void USART_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnOrDi);
+void USART_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority);
+
+
+#endif /* INC_STM32F407XX_USART_DRIVER_H_ */
