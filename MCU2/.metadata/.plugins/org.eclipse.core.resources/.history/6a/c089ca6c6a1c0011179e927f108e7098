@@ -1,0 +1,20 @@
+/*
+ * main.h
+ *
+ *  Created on: Mar 8, 2026
+ *      Author: harri
+ */
+
+#ifndef INC_MAIN_H_
+#define INC_MAIN_H_
+
+#include "stm32f4xx_hal.h"
+
+typedef enum
+{
+	SYS_CLOCK_FREQ_50MHZ,
+	SYS_CLOCK_FREQ_80MHZ,
+	SYS_CLOCK_FREQ_120MHZ
+} sys_clock_t;
+
+#endif /* INC_MAIN_H_ */

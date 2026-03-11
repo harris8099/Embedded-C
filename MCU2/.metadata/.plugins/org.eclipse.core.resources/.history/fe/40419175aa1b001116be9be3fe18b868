@@ -1,0 +1,14 @@
+/*
+ * usart.c
+ *
+ *  Created on: Mar 9, 2026
+ *      Author: harri
+ */
+
+#ifndef SRC_USART_C_
+#define SRC_USART_C_
+
+#include "usart.h"
+
+
+#endif /* SRC_USART_C_ */

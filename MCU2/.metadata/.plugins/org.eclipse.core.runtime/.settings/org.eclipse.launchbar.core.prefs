@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:USART2_Example,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:USART2_Example_IT,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM_BluePill,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HSE_SYSCLK_8MHZ,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PLL_Engine,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PLL_Engine_HSE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:time_base_100ms
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HSE_SYSCLK_8MHZ/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HSE_SYSCLK_8MHZ/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM_BluePill/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:USART2_Example/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:USART2_Example/activeLaunchTarget=null\:---

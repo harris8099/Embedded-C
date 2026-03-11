@@ -1,0 +1,31 @@
+/*
+ * usart.h
+ *
+ *  Created on: Mar 9, 2026
+ *      Author: harri
+ */
+
+#ifndef INC_USART_H_
+#define INC_USART_H_
+
+#include "stm32f4xx_hal.h"
+
+UART_HandleTypeDef huart;
+USART_TypeDef Instance = USART2;
+
+typedef struct
+{
+	uint32_t BaudRate = 115200;
+	uint32_t WordLength = UART_WORDLENGTH_8B;
+	uint32_t StopBits = UART_STOPBITS_1;
+	uint32_t Parity = UART_PARITY_NONE;
+	uint32_t Mode = UART_MODE_TX_RX;
+	uint32_t HwFlowCtl = UART_HWCONTROL_NONE;
+	uint32_t OverSampling = UART_OVERSAMPLING_16;
+};
+
+
+
+void USART_Init(void);
+
+#endif /* INC_USART_H_ */

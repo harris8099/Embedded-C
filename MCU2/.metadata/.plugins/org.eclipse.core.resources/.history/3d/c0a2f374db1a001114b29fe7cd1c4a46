@@ -1,0 +1,12 @@
+/*
+ * msp.c
+ *
+ *  Created on: Mar 8, 2026
+ *      Author: harri
+ */
+
+
+void HAL_MspInit(void)
+{
+
+}

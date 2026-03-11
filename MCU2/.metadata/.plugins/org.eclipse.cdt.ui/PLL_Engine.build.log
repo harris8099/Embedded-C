@@ -1,0 +1,17 @@
+16:29:00 **** Incremental Build of configuration Debug for project PLL_Engine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PLL_Engine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\harri\OneDrive\Documents\Embedded-C\MCU2\PLL_Engine\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PLL_Engine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PLL_Engine.elf
+ 
+arm-none-eabi-size  PLL_Engine.elf 
+arm-none-eabi-objdump -h -S PLL_Engine.elf  > "PLL_Engine.list"
+   text	   data	    bss	    dec	    hex	filename
+  11220	     92	   1972	  13284	   33e4	PLL_Engine.elf
+Finished building: default.size.stdout
+ 
+Finished building: PLL_Engine.list
+ 
+
+16:29:01 Build Finished. 0 errors, 0 warnings. (took 856ms)
+

@@ -1,0 +1,28 @@
+/*
+ * usart.c
+ *
+ *  Created on: Mar 9, 2026
+ *      Author: harri
+ */
+
+#ifndef SRC_USART_C_
+#define SRC_USART_C_
+
+#include "usart.h"
+
+Init.BaudRate = 115200;
+uint32_t WordLength = UART_WORDLENGTH_8B;
+uint32_t StopBits = UART_STOPBITS_1;
+uint32_t Parity = UART_PARITY_NONE;
+uint32_t Mode = UART_MODE_TX_RX;
+uint32_t HwFlowCtl = UART_HWCONTROL_NONE;
+uint32_t OverSampling = UART_OVERSAMPLING_16;
+
+
+void USART_Init(void)
+{
+	huart.Instance = Instance;
+	huart.Init = ;
+}
+
+#endif /* SRC_USART_C_ */
